@@ -1,4 +1,5 @@
 # react_gallery_app
  FSJS project 7
 
- This is react driven photo gallery app, fetching images live from Flickr photography API.
+ This is photo gallery app, fetching images live from Flickr photography API.
+ Build by using React.
