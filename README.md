@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+This is a React powered Photo gallary application, fetching images from external
+Flickr images API.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
