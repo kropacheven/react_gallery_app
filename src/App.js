@@ -6,7 +6,6 @@ import PhotoContainer from './components/PhotoContainer';
 
 //console.log(apiKey);
 
-
 function App() {
   return (
     <div>
