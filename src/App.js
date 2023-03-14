@@ -13,7 +13,8 @@ function App() {
    axios.get(apiKey)
     .then(response => {
       //handle success
-      console.log(response.data.photos.photo);
+      //console.log(response.data.photos.photo);
+      setPhoto(response.data.photos.photo);
     })
     .catch(error => {
       //handle error
@@ -25,7 +26,7 @@ function App() {
     <div>
       <SearchForm />
       <Nav />
-      <PhotoContainer />
+      <PhotoContainer data = {photo} />
     </div>
   );
 }
