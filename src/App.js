@@ -13,7 +13,7 @@ function App() {
    axios.get(apiKey)
     .then(response => {
       //handle success
-      console.log(response);
+      console.log(response.data.photos.photo);
     })
     .catch(error => {
       //handle error
