@@ -10,7 +10,7 @@ import PhotoContainer from './components/PhotoContainer';
 function App() {
   const [photo, setPhoto] = useState([]);
   useEffect(() => {
-   axios.get(apiKey)
+   axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=sunsets&per_page=24&format=json&nojsoncallback=1`)
     .then(response => {
       //handle success
       //console.log(response.data.photos.photo);
