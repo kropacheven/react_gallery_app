@@ -1,7 +1,11 @@
 # Getting Started with Create React App
 
 This is a React powered Photo gallary application, fetching images from external
-Flickr images API.
+Flickr API. User may enter the tag word of images he/she wants to see in a search form.
+24 images of chosen topic wull be fetched/displayed on the screen. 
+3 options of images tg name are also embedded through routing.
+
+Technologies used: React (Compoments, Hooks, Axios, Routes, webpack, JSX, Babel )
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
