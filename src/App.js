@@ -9,7 +9,7 @@ import PhotoContainer from './components/PhotoContainer';
 
 function App() {
   const [photo, setPhoto] = useState([]);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("nature");
 
 
   useEffect(() => {
