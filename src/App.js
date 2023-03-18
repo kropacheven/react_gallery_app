@@ -10,13 +10,18 @@ import PhotoContainer from './components/PhotoContainer';
 function App() {
   const [photo, setPhoto] = useState([]);
   const [query, setQuery] = useState("nature");
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+   setLoading(true);
+   let activeFetch = true;
    axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
     .then(response => {
       //handle success
       //console.log(response.data.photos.photo);
-      setPhoto(response.data.photos.photo);
+      if (activeFetch) {
+        setPhoto(response.data.photos.photo);
+        setLoading(false);
+      }
     })
     .catch(error => {
       //handle error
@@ -32,7 +37,11 @@ function App() {
     <div>
       <SearchForm changeQuery={handleQueryChange}/>
       <Nav />
-      <PhotoContainer data = {photo} />
+      {
+      (loading)
+      ? <p>Loading...</p>
+      : <PhotoContainer data = {photo} />
+      }
     </div>
   );
 }
