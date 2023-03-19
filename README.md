@@ -2,8 +2,8 @@
 
 This is a React powered Photo gallary application, fetching images from external
 Flickr API. User may enter the tag word of images he/she wants to see in a search form.
-24 images of chosen topic wull be fetched/displayed on the screen. 
-3 options of images tag name are also embedded through routing by button click.
+24 images of chosen topic will be fetched/displayed on the screen. 
+3 options of images tag name are also embedded through routing and activated by button click.
 
 Technologies and tools used: React(Compoments, Hooks, Axios, Routes, webpack, JSX, Babel ).
 
