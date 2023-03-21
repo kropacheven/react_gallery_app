@@ -4,6 +4,8 @@ import apiKey from './config';
 import SearchForm from './components/SearchForm';
 import Nav from './components/Nav';
 import PhotoContainer from './components/PhotoContainer';
+//import NotFound404 from './components/NotFound404';
+import { Route, Routes } from "react-router-dom";
 
 //console.log(apiKey);
 
@@ -42,6 +44,12 @@ function App() {
       ? <p>Loading...</p>
       : <PhotoContainer data = {photo} />
       }
+      <Routes>
+        <Route path="/cats" element={<PhotoContainer />}></Route>
+        <Route path="/dogs" element={<PhotoContainer />}></Route>
+        <Route path="/computers" element={<PhotoContainer />}></Route>
+        {/* <Route path="*" element={<NotFound404 />}/> */}
+      </Routes>
     </div>
   );
 }
