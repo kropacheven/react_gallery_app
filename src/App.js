@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
    setLoading(true);
    let activeFetch = true;
-   // Search fetch request:
+   // SearchForm fetch request:
    axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
     .then(response => {
       //handle success
@@ -42,7 +42,7 @@ function App() {
     .catch(error => {
       console.log("Error while fetching and parsing data", error);
     }) 
-    // Dogs fetch request:
+   // Dogs fetch request:
     axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=dogs&per_page=24&format=json&nojsoncallback=1`)
     .then(response => {
       setDogs(response.data.photos.photo);
@@ -50,7 +50,7 @@ function App() {
     .catch(error => {
       console.log("Error while fetching and parsing data", error);
     }) 
-    // Computers fetch request:
+   // Computers fetch request:
     axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=computers&per_page=24&format=json&nojsoncallback=1`)
     .then(response => {
       setComputers(response.data.photos.photo);
@@ -84,7 +84,7 @@ function App() {
         <Route path="/dogs" element={<PhotoContainer data={dogs}/>}></Route>
         <Route path="/computers" element={<PhotoContainer data={computers}/>}></Route>
         <Route path=":searchText" element={<PhotoContainer data={photo}/>}></Route>
-        <Route path="/*" element={<NotFound404 />}/>
+        <Route path="*" element={<NotFound404 />}/>
       </Routes>
       }
     </div>
