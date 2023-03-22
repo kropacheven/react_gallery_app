@@ -11,7 +11,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [photo, setPhoto] = useState([]);
-  const [query, setQuery] = useState("nature");
+  const [query, setQuery] = useState("cats");
   const [loading, setLoading] = useState(true);
   useEffect(() => {
    setLoading(true);
@@ -39,17 +39,24 @@ function App() {
     <div>
       <SearchForm changeQuery={handleQueryChange}/>
       <Nav />
-      {
+      {/* {
       (loading)
       ? <p>Loading...</p>
       : <PhotoContainer data = {photo} />
-      }
+      } */}
+      {
+      (loading)
+      ? <p>Loading...</p>
+      :
       <Routes>
-        <Route path="/cats" element={<PhotoContainer />}></Route>
+        <Route path="/" element={<PhotoContainer data={photo}/>}></Route>
+        <Route path=":searchText" element={<PhotoContainer data={photo}/>}></Route>
+        {/* <Route path="/cats" element={<PhotoContainer />}></Route>
         <Route path="/dogs" element={<PhotoContainer />}></Route>
-        <Route path="/computers" element={<PhotoContainer />}></Route>
+        <Route path="/computers" element={<PhotoContainer />}></Route> */}
         {/* <Route path="*" element={<NotFound404 />}/> */}
       </Routes>
+      }
     </div>
   );
 }
