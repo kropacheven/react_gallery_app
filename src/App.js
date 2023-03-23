@@ -69,11 +69,6 @@ function App() {
     <div>
       <SearchForm changeQuery={handleQueryChange}/>
       <Nav />
-      {/* {
-      (loading)
-      ? <p>Loading...</p>
-      : <PhotoContainer data = {photo} />
-      } */}
       {
       (loading)
       ? <p>Loading...</p>
