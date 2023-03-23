@@ -78,7 +78,7 @@ function App() {
         <Route path="/cats" element={<PhotoContainer data={cats}/>}></Route>
         <Route path="/dogs" element={<PhotoContainer data={dogs}/>}></Route>
         <Route path="/computers" element={<PhotoContainer data={computers}/>}></Route>
-        <Route path=":searchText" element={<PhotoContainer data={photo}/>}></Route>
+        <Route path="/search/:searchText" element={<PhotoContainer data={photo}/>}></Route>
         <Route path="*" element={<NotFound404 />}/>
       </Routes>
       }
