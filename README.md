@@ -8,6 +8,9 @@ This is a React powered Photo gallary single-page application, creating gallery 
 
 Technologies and tools applied: HTML, CSS, JavaScript, React(Compoments, Hooks, Data Fetch, Axios, Route, JSX).
 
+!!! Necessary instruction:
+To work with app correctly you need to craate config.js file in src folder and paste your Flickr Api key here (assign to the const apiKey variable) and do not forget export default apiKey to furher reach it in the main App.js component.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
