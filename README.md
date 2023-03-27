@@ -7,7 +7,7 @@ Flickr API. User may enter the tag word of images he/she wants to see in a searc
 24 images of chosen topic will be fetched/displayed on the screen. 
 3 options of images tag name are also embedded through routing and activated by button click. The URL route is matching user's search automatically. Loading element is added.
 
-Technologies and tools used: React(Compoments, Hooks, Data Fetch, Axios, Routes, JSX).
+Technologies and tools used: HTML, CSS, JavaScript, React(Compoments, Hooks, Data Fetch, Axios, Route, JSX).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
